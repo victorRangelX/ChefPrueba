@@ -34,7 +34,7 @@ app.post("/preguntar", async (req, res) => {
     });
 
     const data = await response.json();
-
+    console.log("RESPUESTA IA:", data);
     const text = data?.choices?.[0]?.message?.content || "Sin respuesta";
 
     res.json({ respuesta: text });
