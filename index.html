@@ -96,7 +96,7 @@ async function enviar() {
   agregarMensaje(mensaje, "usuario");
   input.value = "";
 
-  const res = await fetch("/preguntar", {
+  const res = await fetch("https://chefprueba.onrender.com/preguntar", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
