@@ -1,0 +1,14 @@
+{
+  "name": "chat-recetas",
+  "version": "1.0.0",
+  "description": "Chat de recetas con IA",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "cors": "^2.8.5"
+  }
+}

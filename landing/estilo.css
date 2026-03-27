@@ -1,0 +1,193 @@
+:root {
+            --duracion: 25s; /* Tiempo total del ciclo (5s por slide) */
+        }
+            /*elementos de la tablas generales */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 2000px;
+            overflow: relative;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: rgb(37, 37, 37);
+        }
+
+        /*Baner*/
+            .baner{
+          background-color: rgb(128, 38, 202);
+            position: absolute;
+            width: 100%;
+            height: 60vh;
+            display: flex;
+        
+            overflow: hidden;
+        }
+
+
+        /* navegacion  */
+    
+        .barnav{
+            background-color: black;
+            position: relative;
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            margin: 1vh;
+            overflow: hidden;
+        }
+
+            .item{
+            background-color: rgb(143, 143, 143);
+            position:static;
+            width: 15%;
+            height: 5vh;
+            padding: 1vh;
+             margin: 2vh;
+           
+        }
+
+               .itemBoton{
+            background-color: rgb(233, 93, 93);
+            position:static;
+            width: 15%;
+            height: 5vh;
+            padding: 1vh;
+             margin: 2vh;
+           
+        }
+
+
+           .itemLogo{
+            background-color: rgb(88, 143, 243);
+            position:static;
+            width: 15%;
+            height: 5vh;
+            padding: 1vh;
+             margin: 2vh;
+           
+        }
+
+
+
+
+        /*carucel  */
+        .contenedor-carrusel {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            overflow: hidden;
+        }
+
+        /* Deslizador principal */
+        .deslizador {
+            display: flex;
+            width: 500%; /* 5 elementos = 500% */
+            height: 100%;
+            animation: deslizar var(--duracion) infinite ease-in-out;
+        }
+
+        /* Estilo de cada diapositiva */
+        .slide {
+            position: relative;
+            width: 20%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Fondo con efecto Parallax */
+        .fondo-parallax {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120%; /* Más ancho para permitir el movimiento */
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            animation: parallax-mov var(--duracion) infinite ease-in-out;
+        }
+
+        /* Contenido del slide */
+        .contenido {
+            background: rgba(0, 0, 0, 0.151);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Animación del movimiento del carrusel */
+        @keyframes deslizar {
+            0%, 15% { transform: translateX(0%); }
+            20%, 35% { transform: translateX(-20%); }
+            40%, 55% { transform: translateX(-40%); }
+            60%, 75% { transform: translateX(-60%); }
+            80%, 95% { transform: translateX(-80%); }
+            100% { transform: translateX(0%); }
+        }
+
+        /* Animación Parallax (el fondo se mueve en sentido contrario o diferente ritmo) */
+        @keyframes parallax-mov {
+            0%, 15% { transform: translateX(0); }
+            20%, 35% { transform: translateX(-5%); }
+            40%, 55% { transform: translateX(-10%); }
+            60%, 75% { transform: translateX(-15%); }
+            80%, 95% { transform: translateX(-20%); }
+            100% { transform: translateX(0); }
+        }
+        /*seccion 01 */
+
+        .Doble{
+          background-color: rgb(147, 165, 172);
+            position: absolute;
+            width: 100%;
+            height: 60vh;
+            display: flex;
+        
+            overflow: hidden;
+        }
+
+
+          .bot{
+          background-color: rgb(182, 182, 182);
+            position: absolute;
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .derecha{
+            position: relative;
+            width: 50%;
+            height: 60%;
+            margin-top: 10vh;
+            background-color: rgb(214, 214, 214);
+        }
+
+        .izquierda {
+            position: relative;
+            width: 50%;
+            height: 60%;
+            margin-top: 10vh;
+            background-color: rgb(250, 209, 214);
+        }
+
+
+
+
+
+
+
+
+
+
+        /* Colores de prueba para los fondos */
+        .s1 .fondo-parallax { background-image: url('https://picsum.photos/id/10/1600/900'); }
+        .s2 .fondo-parallax { background-image: url('https://picsum.photos/id/20/1600/900'); }
+        .s3 .fondo-parallax { background-image: url('https://picsum.photos/id/30/1600/900'); }
+        .s4 .fondo-parallax { background-image: url('https://picsum.photos/id/40/1600/900'); }
+        .s5 .fondo-parallax { background-image: url('https://picsum.photos/id/50/1600/900'); }
