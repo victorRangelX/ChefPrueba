@@ -19,7 +19,7 @@ app.post("/preguntar", async (req, res) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "openai/gpt-3.5-turbo",
+        model: "meta-llama/llama-3-8b-instruct",
         messages: [
           {
             role: "system",
